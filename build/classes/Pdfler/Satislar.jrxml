@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="20985d53-6f41-4e58-b025-846112c21274">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from qaime;]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MusteriAdSoyad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Odenecek" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Odenildi" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Zaman" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="Odenecek_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Odenecek}]]></variableExpression>
+	</variable>
+	<variable name="Odenildi_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Odenildi}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement x="195" y="0" width="166" height="52" uuid="e066d340-4692-4452-8c1e-4206e7c52124"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qaimeler]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="33" uuid="a20eb679-dac0-42e4-93e4-471b07eb7afc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="130" height="33" uuid="df150a87-dcce-47bc-9dd8-dbfad03d61b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[MusteriAdSoyad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="0" width="100" height="33" uuid="663cb13a-f195-4cc4-bbd3-5558ff9e5961"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Odenecek]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="100" height="33" uuid="6e437efd-c633-40ee-9d36-3bd522492327"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Odenildi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="125" height="33" uuid="bde9f515-459f-4461-b288-97acf1a25b0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Zaman]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="38" uuid="2af021f8-1a7c-4a0e-912a-81ead75d023f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="130" height="38" uuid="e6504cd8-48ad-4d67-9385-6ae14b1cb97a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MusteriAdSoyad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="100" height="38" uuid="0c32d7ce-61ac-477b-bbc6-ee20576588a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Odenecek}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="100" height="38" uuid="51389c99-e41a-4b29-ada9-4ba8b3f592f0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Odenildi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="125" height="38" uuid="b8255c1b-2537-48c7-8194-2308ad2daf40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Zaman}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="38" width="555" height="1" uuid="8dfc1810-d083-4a0b-bb21-3334e2d9aba4"/>
+			</line>
+		</band>
+	</detail>
+	<summary>
+		<band height="72" splitType="Stretch">
+			<textField>
+				<reportElement x="430" y="10" width="125" height="25" uuid="ee0b2c1e-4d0b-4c1a-bb77-7e6075da0352"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Odenecek_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="286" y="10" width="144" height="25" uuid="40e87e99-de80-45bd-a467-1d3f1a5a8ba6"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Toplam odenecek]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="35" width="144" height="25" uuid="c2f13cf6-ba31-4ad1-b24b-bad0a3cf2ce2"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Toplam odenilen]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="35" width="125" height="25" uuid="d448c4d3-a449-40cb-b6ed-06a170dc2069"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Odenildi_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

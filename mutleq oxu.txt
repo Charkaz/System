@@ -1,0 +1,19 @@
+proqrami isletmek ucun jre 8 ve ya 8+ versiyalarindan birini yukleyin 
+mysql server qurun 
+
+mysql serverin username:root
+mysql serverin password:12345
+
+bunlari yukledikden sonra proqramin file' lerini c diski proqram files ' e kopyalayin 
+
+sonra mysql server comandline acin (qeyd etdiyim kimi sifre : 12345)
+
+ create database system
+
+etdikden sonra sql faylinin icinde vacib.sql var . onu mysql comandline - de 
+
+ source C:\Program Files\CharkazSystem\sql\vacib.sql 
+
+seklinde yazin 
+
+ve proqram isletmek ucun hazirdir.

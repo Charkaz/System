@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c4eeb2a-aac4-4083-8fe7-6c0a20b94a4a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from techizatciodenisi]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="techizatciAd" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="techizatciOdenis" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TarixTechizatci" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="112" y="0" width="314" height="47" uuid="022977ad-b71b-4037-9627-cd3c4aebf4bf"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Techizatci odenisleri ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="138" height="40" uuid="d7c879ae-5e78-4f58-a06b-d40ea99b1619"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="0" width="138" height="40" uuid="6bac624f-e3b5-4ba3-a88e-db6d7e5eb195"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[techizatciAd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="138" height="40" uuid="807f995f-ffb7-4339-87f5-936f60df69f2"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[techizatciOdenis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="0" width="138" height="40" uuid="dc7c6eac-d736-4b1f-bb74-071ee2d08911"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[TarixTechizatci]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="138" height="34" uuid="8d3d2c64-a6d0-4e79-aa9f-927c0f84afe3"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="138" height="34" uuid="52f17eef-f1eb-4932-b910-3dbdcfb91ca0"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{techizatciAd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="138" height="34" uuid="fa5c6c3d-e230-470c-b663-88506778c425"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{techizatciOdenis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="0" width="138" height="34" uuid="1c7dc688-adf6-4ad4-936b-be637ffb3ebf"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TarixTechizatci}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="34" width="555" height="1" uuid="ff940cdc-8eea-45f8-b281-5ea1ae4cc686"/>
+			</line>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

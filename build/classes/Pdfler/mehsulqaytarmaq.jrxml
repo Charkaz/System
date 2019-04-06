@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d359aaaf-6483-4de3-9889-a7f7f7838843">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from mehsulqaytarma]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MehsulAd" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TechizatciAd" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Miqdar" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tutar" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tarix" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="0" width="315" height="59" uuid="31c3561c-5f95-4390-b6c9-a617b4082dde"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Techizatciya geri qaytardiginiz mehsullar]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="496" y="59" width="100" height="20" uuid="bc91d2f6-f079-4c47-9ee1-15519002add9"/>
+			</frame>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="92" height="34" uuid="972d49db-187e-4556-a47b-66d4e9f73fcc"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="0" width="92" height="34" uuid="955ade68-1968-4a0f-956b-a15d9eabf1bd"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[MehsulAd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="0" width="92" height="34" uuid="1ce8b8a2-3a88-4553-a374-36c1131b0646"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[TechizatciAd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="92" height="34" uuid="2a0ada53-ea37-4593-85bb-f1126c717325"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Miqdar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="0" width="92" height="34" uuid="564cee8d-2fc9-4beb-a551-28ee2dd2ba10"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Tutar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="92" height="34" uuid="35ff02cf-9664-485c-9112-e1e799d88ffb"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[tarix]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="92" height="29" uuid="cfb6ffc8-fec0-447b-87b4-937d0e8f4388"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="0" width="92" height="29" uuid="6578dcba-cbb9-4f7b-8423-ded6a192dd3e"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MehsulAd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="0" width="92" height="28" uuid="c0c1aeca-44a5-4cef-aa55-508c7fcd1eb0"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TechizatciAd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="92" height="29" uuid="f686f962-e1fb-4989-b070-e596a37316d9"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Miqdar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="92" height="28" uuid="f3851e9f-2e6b-43c6-9c4d-53e3a3536734"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tutar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="92" height="29" uuid="c60df20c-c60c-4552-92f3-e9ba4180041e"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tarix}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="28" width="552" height="1" uuid="7afc9cca-945d-4755-81ef-fe2914bf8571"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

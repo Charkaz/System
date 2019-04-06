@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4f198bfa-a8ee-4027-b10f-30887e6fd55b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select hesab.AdSoyad,hesab.Sirket,satis.id,satis.Mehsul,satis.Miqdar,satis.Vahid,satis.Qiymet,satis.Endrim,satis.Tutar,Qaime.id,Qaime.Zaman,satis.musteri,qaime.odenecek,qaime.odenildi,satis.qaime,qaime.odenecek-qaime.odenildi from hesab,satis,qaime;]]>
+	</queryString>
+	<field name="AdSoyad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Sirket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Mehsul" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Miqdar" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Vahid" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Qiymet" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Endrim" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tutar" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Zaman" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="musteri" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="odenecek" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="odenildi" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qaime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qaime.odenecek-qaime.odenildi" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="126" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="90" height="29" uuid="397b17a9-16d7-4d06-8281-09c8913e8800"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qaime No :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="29" width="56" height="29" uuid="81408772-a326-43c4-82db-27bb8c036203"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tarix :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="56" y="30" width="134" height="28" uuid="d287f421-b310-4804-b17c-b19cd47d4d6b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Zaman}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="58" width="70" height="29" uuid="e721d10c-a3a4-4fee-9e14-d7695362b9c6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Musteri:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="58" width="120" height="29" uuid="ef54906a-e02b-46b2-914b-9548a8c845db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{musteri}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="100" height="30" uuid="284f625c-4d8a-48a6-80d7-e73bea3d5094"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qaime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="140" height="32" uuid="c55b7679-0b17-4a71-ac05-48dec2555c25"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Mehsul]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="0" width="100" height="30" uuid="83a61ac1-bd3f-4e9e-944f-7741cad74f2a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Miqdar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="100" height="32" uuid="8a265e76-f05b-4cde-b6a2-7eb4c2396ddf"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Tutar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="2" width="115" height="30" uuid="3487e9b4-de74-4898-a5b9-0d08255ab58b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Vahid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="2" width="100" height="30" uuid="09491e56-a2b8-477d-8222-c24db9495484"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Qiymet]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="140" height="29" uuid="b50034e7-0ac7-40c6-9f90-a9b040b7c17a"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Mehsul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="29" uuid="ba7b57d3-0cc5-4ee8-9d82-e686a7dc0f59"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tutar}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="29" width="555" height="1" uuid="251408bb-41a3-4764-b449-9d550a13959d"/>
+			</line>
+			<textField>
+				<reportElement x="240" y="0" width="115" height="29" uuid="6f727ec5-744b-4260-a2aa-32d12ca3ffa8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Vahid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="100" height="29" uuid="4457d438-673b-494a-af80-5d390270befa"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Qiymet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="1" width="100" height="29" uuid="da0b5abf-95f3-417b-8abe-a2687da64306"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Miqdar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="138" splitType="Stretch">
+			<textField>
+				<reportElement x="340" y="0" width="112" height="32" uuid="c2404ed9-3797-4080-8f4a-11e282b7f38d"/>
+				<textElement textAlignment="Right">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{odenecek}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="32" width="112" height="30" uuid="56a78a11-674b-4157-9d05-307ccc57bed5"/>
+				<textElement textAlignment="Right">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{odenildi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="0" width="100" height="32" uuid="b8b5f02b-b36e-4801-950d-4cb515321e50"/>
+				<textElement textAlignment="Right">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Odenecek]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="32" width="100" height="32" uuid="3e92cba2-7748-45c9-a5ba-3263a6dc5dcf"/>
+				<textElement textAlignment="Right">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Odenildi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="30" width="100" height="32" uuid="49560e31-2f4b-4ab1-9bb9-7890e7dbf300"/>
+				<textElement textAlignment="Right">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AZN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="0" width="100" height="32" uuid="d26ab44f-272d-4a1f-8e67-7919d5f53c74"/>
+				<textElement textAlignment="Right">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AZN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="64" width="112" height="30" uuid="6e4eb364-4590-480e-98f2-c56130c58a3c"/>
+				<textElement textAlignment="Right">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qaime.odenecek-qaime.odenildi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="455" y="62" width="100" height="32" uuid="0b19bed0-3c72-406d-bb75-a706ba2836bf"/>
+				<textElement textAlignment="Right">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AZN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="62" width="100" height="32" uuid="a16d7bc3-0b8a-4868-a581-2b78dcf8f32e"/>
+				<textElement textAlignment="Right">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qaliq]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="94" width="203" height="32" uuid="60c8cc28-ac21-410b-b0df-88efc897ebf5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Bizi secdiyiniz ucun ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="94" width="194" height="32" uuid="369d120e-6cb6-4258-93da-ea5013331848"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[ rehberliyi tesekkur edir]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="203" y="94" width="155" height="32" uuid="08178783-bfbe-4456-b282-134478eda5b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Sirket}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
