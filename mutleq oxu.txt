@@ -12,7 +12,7 @@ sonra mysql server comandline acin (qeyd etdiyim kimi sifre : 12345)
 
 etdikden sonra sql faylinin icinde vacib.sql var . onu mysql comandline - de 
 
- source C:\Program Files\CharkazSystem\sql\vacib.sql 
+ source C:\Program Files\CharkazSystem\vacib.sql 
 
 seklinde yazin 
 
